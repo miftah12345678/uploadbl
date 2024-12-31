@@ -1,0 +1,81 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Before Life - Upload more, wait less.</title>
+  <meta name="description" content="With our global CDN, upload your image anywhere with exceptional speed and reliability.">
+  <link rel="icon" class=js-site-favicon type=image/ico href="https://g.top4top.io/p_3281zyaxb0.jpg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Before Life Image Uploader</h1>
+      <p>Made With <span class="heart">❤️</span> by Rzkymlna</p>
+    </div>
+    <form id="uploadForm">
+      <label for="fileInput" class="file-label"><i class="far fa-folder"></i> Choose a image or drop it here...</label>
+      <input type="file" name="file" id="fileInput" accept="image/*">
+      <button type="submit" class="upload-button">Upload</button>
+    </form>   
+    <div class="preview" id="preview"></div>
+    <div class="history">
+      <h2>History:</h2>
+    <hr>
+      <div id="history"></div>
+    </div>
+    <div class="stats">
+      <div class="stats-box">
+        <p>Total Files</p>
+        <p id="totalFiles"><i class="fas fa-spinner fa-spin"></i></p>
+      </div>
+      <div class="stats-box">
+        <p>Total Size</p>
+        <p id="totalSize"><i class="fas fa-spinner fa-spin"></i></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-container">
+    <div class="about-header">
+      <h2>About</h2>
+    </div>
+    <div class="about-content">
+      <p>Upload your images anywhere with exceptional speed and reliability, powered by our global CDN network.</p>
+      <img src="./src/bl.png" alt="Icon">
+    </div>
+  </div>
+  <div class="go-container">
+    <a href="https://github.com/Rzky7c" class="go-button github">
+      <i class="fa-brands fa-github"></i> Github
+    </a>
+    <a href="https://sociabuzz.com/rzkymlna/tribe" class="go-button donation">
+      <i class="fa fa-heart"></i> Donation
+    </a>    
+    <a href="/docs" class="go-button docs">
+      <i class="fa fa-book"></i> Docs
+    </a>    
+  </div>
+  <div class="container">
+    <h1>Uploaded Files</h1>
+    <p>Here is the list of uploaded files. Click the "View" button to open the image in a new tab.</p>
+    <div id="fileList" class="file-list"></div>
+  
+    <!-- Pagination Controls -->
+    <div id="pagination">
+      <button onclick="changePage(-1)" id="prevPage">Previous</button>
+      <button id="currentPage" onclick="togglePageButton()" class="page-button">Page 1</button>
+      <button onclick="changePage(1)" id="nextPage">Next</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Developed by Rzkymlna 2023 - <span id="currentYear"></span></p>
+  </footer>
+  <script src="index.js"></script>
+</body>
+</html>
